@@ -12,4 +12,15 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
+
+  // ✅ add these
+  server: {
+    host: true,
+    allowedHosts: 'all',
+  },
+  preview: {
+    host: true,
+    allowedHosts: 'all',
+    port: Number(process.env.PORT) || 5050,
+  },
 });
